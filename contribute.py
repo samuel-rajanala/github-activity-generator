@@ -28,10 +28,9 @@ def main(def_args=sys.argv[1:]):
     if days_after < 0:
         sys.exit('days_after must not be negative')
     if os.path.exists(directory):
-    print(f"Directory '{directory}' already exists.")
-    print("Please remove it or choose a different repository.")
-    sys.exit(1)
-
+    	print(f"Directory '{directory}' already exists.")
+    	print("Please remove it or choose a different repository.")
+    	sys.exit(1)
     os.mkdir(directory)
     os.chdir(directory)
     run(['git', 'init', '-b', 'main'])
